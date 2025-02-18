@@ -1,0 +1,11 @@
+is.num = (arg) => typeof arg === "number";
+is.nan = (arg) => Number.isNaN(arg);
+is.str = (arg) => typeof arg === "string";
+is.bool = (arg) => typeof arg === "boolean";
+is.undef = (arg) => arg === undefined;
+is.def = (arg) => !is.undef(arg);
+is.arr = (arg) => Array.isArray(arg);
+is.obj = (arg) => typeof arg === "object" && !is.fun(arg) && !is.arr(arg) && arg !== null;
+is.fun = (arg) => typeof arg === "function";
+is.truthy = (arg) => !!arg;
+is.falsy = (arg) => !arg;
